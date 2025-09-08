@@ -1,0 +1,6 @@
+Flask==2.3.2
+radon==6.0.1
+pylint==2.21.2
+flake8==6.1.0
+pycodestyle==2.10.0
+beautifulsoup4==4.12.2
