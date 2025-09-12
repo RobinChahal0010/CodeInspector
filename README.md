@@ -1,7 +1,7 @@
-# 🕵️ CodeInspector – Multi-language Code Analysis Tool
+# 🕵️ CodeInspector – Python Code Analysis Tool
 
-**Analyze, inspect, and understand your code like never before!**  
-CodeInspector is a Flask-based web application that helps developers assess Python, JavaScript, and HTML code quality by checking syntax, measuring complexity, calculating metrics, and generating detailed PDF reports.
+**Analyze, inspect, and improve your Python code effortlessly!**  
+CodeInspector is a Flask-based web application designed to help Python developers assess code quality by checking syntax, measuring complexity, calculating metrics, and generating detailed PDF reports — all in one place.
 
 ---
 
@@ -13,28 +13,20 @@ CodeInspector is a Flask-based web application that helps developers assess Pyth
 - Halstead metrics to understand code structure
 - Lines of code and comment count
 
-✅ **JavaScript Code Analysis**
-- ESLint integration to highlight style and syntax issues
-
-✅ **HTML Code Analysis**
-- Counts tags, inline styles, and scripts using `BeautifulSoup`
-
 ✅ **PDF Reports**
-- Generate downloadable reports summarizing analysis results
+- Downloadable reports summarizing analysis results with professional formatting
 
 ✅ **Session Management**
-- Keeps track of the last analysis for quick access and report generation
+- Keeps track of the last analysis for easy access and reporting
 
-✅ **Simple and Intuitive UI**
-- Upload code files easily and view results in a structured format
+✅ **User-Friendly Interface**
+- Upload Python files easily and view results with structured, readable metrics
 
 ---
 
 ## 📂 Supported File Types
 
-- `.py` → Python scripts  
-- `.js` → JavaScript files  
-- `.html` / `.htm` → HTML documents  
+- `.py` → Python scripts
 
 ---
 
@@ -55,42 +47,36 @@ Install dependencies
 bash
 Copy code
 pip install -r requirements.txt
-Install ESLint globally for JavaScript analysis
-
-bash
-Copy code
-npm install -g eslint
 Run the app
 
 bash
 Copy code
 python app.py
-Open http://127.0.0.1:5000 in your browser.
+Open the app in your browser
+Visit http://127.0.0.1:5000
 
 📖 How to Use
-Upload a .py, .js, or .html file from the homepage.
+Upload a .py file from the homepage.
 
-Get detailed metrics and analysis for the uploaded file.
+Get instant insights about syntax errors, complexity, effort, and more.
 
-Download the report as a PDF for sharing or record keeping.
+Download the results as a PDF for sharing or documentation.
 
 🛠 Technologies Used
 Backend: Flask
 
-Python Libraries: radon, ast, BeautifulSoup, FPDF
+Python Libraries: radon, ast, FPDF
 
-JavaScript Analysis: ESLint via subprocess
+File Handling: Upload and download support with session tracking
 
-File Handling: Uploads and downloads supported with session tracking
-
-Frontend: HTML templates, CSS styling
+Frontend: HTML templates with Bootstrap-based styling
 
 ⚙ Possible Improvements
-✔ Support for more languages (CSS, Java, etc.)
-✔ Real-time linting and analysis
-✔ Visualizations for complexity metrics
-✔ User authentication for personal analysis history
-✔ Cloud deployment and scalability enhancements
+✔ Add support for more Python metrics (e.g., style guides, PEP8 checks)
+✔ Implement real-time linting
+✔ Create visualizations for complexity or effort metrics
+✔ Add user authentication for history and saved reports
+✔ Deploy to cloud platforms like Heroku or Render for public access
 
 📂 Project Structure
 csharp
@@ -98,7 +84,7 @@ Copy code
 CodeInspector/
 ├── app.py
 ├── requirements.txt
-├── uploads/             # Temporary uploads
+├── uploads/             # Temporary uploaded files
 ├── templates/
 │   ├── index.html
 │   └── result.html
@@ -106,31 +92,28 @@ CodeInspector/
 │   └── style.css
 └── README.md
 📢 Contribution
-Feel free to fork this project and submit pull requests! Suggestions and improvements are always welcome.
+Contributions are welcome!
+Feel free to fork this project, submit pull requests, or open issues with suggestions or improvements.
 
 📞 Contact
 Developed by Robinpreet Chahal
 Check out more projects at https://github.com/RobinChahal0010
 
-Empower developers by making code more understandable, maintainable, and efficient. Try CodeInspector today!
+Let’s empower developers to write smarter, cleaner, and more efficient Python code!
+
+📌 License
+This project is open-source and available for modification, improvement, and learning.
 
 yaml
 Copy code
 
 ---
 
-Let me know if you want:
-✔ A `.gitignore` template for this project  
-✔ A sample `requirements.txt`  
-✔ Instructions on deploying it or adding badges like Python version, license, etc.
-
-
-
-
-
-
-
-Ask ChatGPT
+### ✅ Additional suggestions if you want to make it even better:
+✔ Add badges at the top (Python version, license, contributors count, etc.)  
+✔ Include screenshots of the app’s UI for clarity  
+✔ Write a CONTRIBUTING.md file for guiding future collaborators  
+✔ Expand the documentation with examples of input files and sample reports  
 
 
 
