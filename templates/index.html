@@ -58,6 +58,14 @@
             border-color: #e94560;
             box-shadow: 0 0 8px rgba(233, 69, 96, 0.5);
         }
+        .form-label, .text-muted {
+    color: #ddd !important; 
+}
+
+.text-muted {
+    font-size: 0.85rem;
+}
+
     </style>
 </head>
 <body>
@@ -71,7 +79,7 @@
             <div class="mb-3 text-start">
                 <label for="codefile" class="form-label">Upload Code File</label>
                 <input class="form-control" type="file" name="codefile" required>
-                <small class="text-muted">Accepted formats: .py, .js, .html</small>
+                <small class="text-muted">Accepted formats: .py</small>
             </div>
             <button type="submit" class="btn btn-primary w-100">Analyze</button>
         </form>
