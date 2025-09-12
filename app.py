@@ -50,40 +50,9 @@ def analyze_python(file_path):
         "comments": comment_lines
     }
 
-# ----------------------------
-# JS Code Analysis via ESLint
-# ----------------------------
-def analyze_js(file_path):
-    try:
-        result = subprocess.run(
-            ["eslint", "--format", "compact", file_path],
-            capture_output=True,
-            text=True
-        )
-        output = result.stdout.strip() or "No ESLint errors!"
-    except Exception as e:
-        output = f"ESLint not installed or error: {e}"
-    return output
 
-# ----------------------------
-# HTML Code Analysis
-# ----------------------------
-def analyze_html(file_path):
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-    soup = BeautifulSoup(content, "html.parser")
-    tags = len(soup.find_all())
-    inline_styles = len(soup.find_all(style=True))
-    inline_scripts = len(soup.find_all("script"))
-    return {
-        "tags": tags,
-        "inline_styles": inline_styles,
-        "inline_scripts": inline_scripts
-    }
 
-# ----------------------------
-# Routes
-# ----------------------------
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -96,10 +65,7 @@ def index():
 
             if ext == "py":
                 result = analyze_python(file_path)
-            elif ext == "js":
-                result = analyze_js(file_path)
-            elif ext in ["html", "htm"]:
-                result = analyze_html(file_path)
+            
             else:
                 result = {"error": "Unsupported file type!"}
 
@@ -108,9 +74,7 @@ def index():
             session["last_filename"] = file_name
             session["last_file_ext"] = ext
 
-            # Redirect to result page
             return redirect(url_for("result_page"))
-
     return render_template("index.html")
 
 @app.route("/result")
@@ -118,7 +82,25 @@ def result_page():
     result = session.get("last_analysis")
     filename = session.get("last_filename", "file")
     ext = session.get("last_file_ext", "py")
-    return render_template("result.html", result=result, filename=filename, ext=ext)
+
+    # Simplify result for Python files
+    simple_result = {}
+    if ext == "py" and result and not result.get("error"):
+        simple_result["syntax_ok"] = result.get("syntax_ok")
+        simple_result["syntax_error"] = result.get("syntax_error")
+        simple_result["complexity"] = result.get("complexity")
+        simple_result["lines"] = result.get("lines")
+        simple_result["comments"] = result.get("comments")
+
+        halstead = result.get("halstead", {})
+        total = halstead.get("total") if halstead else None
+        if total:
+            simple_result["effort"] = round(total[9], 2)
+            simple_result["bugs"] = round(total[11], 4)
+    else:
+        simple_result = result  # For JS and HTML or error cases
+
+    return render_template("result.html", result=simple_result, filename=filename, ext=ext)
 
 @app.route("/download")
 def download_report():
