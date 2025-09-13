@@ -104,19 +104,3 @@ Let’s empower developers to write smarter, cleaner, and more efficient Python 
 📌 License
 This project is open-source and available for modification, improvement, and learning.
 
-yaml
-Copy code
-
----
-
-### ✅ Additional suggestions if you want to make it even better:
-✔ Add badges at the top (Python version, license, contributors count, etc.)  
-✔ Include screenshots of the app’s UI for clarity  
-✔ Write a CONTRIBUTING.md file for guiding future collaborators  
-✔ Expand the documentation with examples of input files and sample reports  
-
-
-
-
-
-ChatGPT can make mistakes. Check importa
