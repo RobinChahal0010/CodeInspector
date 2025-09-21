@@ -71,12 +71,6 @@ File Handling: Upload and download support with session tracking
 
 Frontend: HTML templates with Bootstrap-based styling
 
-⚙ Possible Improvements
-✔ Add support for more Python metrics (e.g., style guides, PEP8 checks)
-✔ Implement real-time linting
-✔ Create visualizations for complexity or effort metrics
-✔ Add user authentication for history and saved reports
-✔ Deploy to cloud platforms like Heroku or Render for public access
 
 📂 Project Structure
 csharp
@@ -84,7 +78,7 @@ Copy code
 CodeInspector/
 ├── app.py
 ├── requirements.txt
-├── uploads/             # Temporary uploaded files
+├── uploads/             
 ├── templates/
 │   ├── index.html
 │   └── result.html
