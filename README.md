@@ -1,100 +1,342 @@
-# 🕵️ CodeInspector – Python Code Analysis Tool
+<p align="center">
+  <img src="./assets/banner.png" width="100%" alt="CodeInspector Banner"/>
+</p>
 
-**Analyze, inspect, and improve your Python code effortlessly!**  
-CodeInspector is a Flask-based web application designed to help Python developers assess code quality by checking syntax, measuring complexity, calculating metrics, and generating detailed PDF reports — all in one place.
+<h1 align="center">🕵️ CodeInspector</h1>
 
----
+<h3 align="center">
+⚡ Python Code Analysis • Complexity Metrics • PDF Reports
+</h3>
 
-## 🚀 Features
-
-✅ **Python Code Analysis**
-- Syntax validation using `ast`
-- Cyclomatic complexity with `radon`
-- Halstead metrics to understand code structure
-- Lines of code and comment count
-
-✅ **PDF Reports**
-- Downloadable reports summarizing analysis results with professional formatting
-
-✅ **Session Management**
-- Keeps track of the last analysis for easy access and reporting
-
-✅ **User-Friendly Interface**
-- Upload Python files easily and view results with structured, readable metrics
+<p align="center">
+<i>Inspect. Analyze. Improve.</i>
+</p>
 
 ---
 
-## 📂 Supported File Types
+<p align="center">
 
-- `.py` → Python scripts
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask"/>
+<img src="https://img.shields.io/badge/Radon-Code%20Metrics-orange?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/FPDF-PDF%20Reports-red?style=for-the-badge"/>
+<img src="https://img.shields.io/github/stars/RobinChahal0010/CodeInspector?style=for-the-badge"/>
+<img src="https://img.shields.io/github/forks/RobinChahal0010/CodeInspector?style=for-the-badge"/>
+
+</p>
 
 ---
 
-## 📦 Installation & Setup
+# 🧠 About CodeInspector
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/RobinChahal0010/CodeInspector.git
-   cd CodeInspector
-Create and activate a virtual environment (optional but recommended)
+CodeInspector is a Flask-based Python code analysis platform designed to help developers evaluate and improve their code quality through automated inspection and software metrics.
 
-bash
-Copy code
+The system analyzes uploaded Python files and generates detailed insights including:
+
+- Syntax validation
+- Cyclomatic complexity
+- Halstead metrics
+- Code statistics
+- Professional PDF reports
+
+---
+
+# ⚡ Core Features
+
+## 🧪 Syntax Analysis
+
+Validate Python code structure using Python's built-in AST parser.
+
+### Checks Include
+
+- Syntax errors
+- Invalid structures
+- Parsing validation
+
+---
+
+## 📊 Complexity Analysis
+
+Measure code maintainability using Cyclomatic Complexity.
+
+### Example Metrics
+
+```python
+Function Complexity:
+calculate_metrics() → B
+analyze_code() → A
+generate_report() → C
+```
+
+Powered by:
+
+- Radon
+- AST analysis
+
+---
+
+## 🧮 Halstead Metrics
+
+Analyze software complexity mathematically.
+
+### Metrics Generated
+
+- Program Length
+- Vocabulary
+- Volume
+- Difficulty
+- Effort
+
+---
+
+## 📈 Code Statistics
+
+Get detailed code insights instantly.
+
+### Includes
+
+- Total Lines of Code
+- Blank Lines
+- Comment Count
+- Maintainability Information
+
+---
+
+## 📄 PDF Report Generator
+
+Generate downloadable professional reports containing:
+
+- Syntax Results
+- Complexity Scores
+- Code Metrics
+- Summary Analysis
+
+Perfect for:
+- Documentation
+- Academic submissions
+- Developer portfolios
+- Code reviews
+
+---
+
+# 🏗 System Workflow
+
+```text
+Upload Python File
+        ↓
+AST Parsing
+        ↓
+Syntax Validation
+        ↓
+Complexity Analysis
+        ↓
+Metrics Generation
+        ↓
+PDF Report Creation
+        ↓
+Final Results Dashboard
+```
+
+---
+
+# 🖼 Preview
+
+## 📊 Analysis Dashboard
+
+<p align="center">
+  <img src="./assets/dashboard.png" width="90%"/>
+</p>
+
+---
+
+## 📄 PDF Report
+
+<p align="center">
+  <img src="./assets/report_preview.png" width="85%"/>
+</p>
+
+---
+
+# 🛠 Tech Stack
+
+## Backend
+
+- Flask
+
+## Python Libraries
+
+| Library | Purpose |
+|---|---|
+| ast | Syntax Parsing |
+| radon | Complexity Metrics |
+| FPDF | PDF Report Generation |
+
+---
+
+# 📂 Supported Files
+
+| Extension | Description |
+|---|---|
+| `.py` | Python Source Files |
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/RobinChahal0010/CodeInspector.git
+cd CodeInspector
+```
+
+---
+
+## 2️⃣ Create Virtual Environment
+
+### Linux / macOS
+
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies
+source venv/bin/activate
+```
 
-bash
-Copy code
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Run the app
+```
 
-bash
-Copy code
+---
+
+## 4️⃣ Run Application
+
+```bash
 python app.py
-Open the app in your browser
-Visit http://127.0.0.1:5000
+```
 
-📖 How to Use
-Upload a .py file from the homepage.
+---
 
-Get instant insights about syntax errors, complexity, effort, and more.
+## 5️⃣ Open in Browser
 
-Download the results as a PDF for sharing or documentation.
+```text
+http://127.0.0.1:5000
+```
 
-🛠 Technologies Used
-Backend: Flask
+---
 
-Python Libraries: radon, ast, FPDF
+# 📖 How It Works
 
-File Handling: Upload and download support with session tracking
+## Step 1
 
-Frontend: HTML templates with Bootstrap-based styling
+Upload a Python file (`.py`)
 
+## Step 2
 
-📂 Project Structure
-csharp
-Copy code
+CodeInspector performs:
+
+- Syntax parsing
+- Complexity analysis
+- Metrics extraction
+
+## Step 3
+
+View detailed results instantly.
+
+## Step 4
+
+Download a professional PDF report.
+
+---
+
+# 📂 Project Structure
+
+```text
 CodeInspector/
+│
 ├── app.py
 ├── requirements.txt
-├── uploads/             
+│
+├── uploads/
+│
 ├── templates/
 │   ├── index.html
 │   └── result.html
+│
 ├── static/
 │   └── style.css
+│
 └── README.md
-📢 Contribution
-Contributions are welcome!
-Feel free to fork this project, submit pull requests, or open issues with suggestions or improvements.
+```
 
-📞 Contact
-Developed by Robinpreet Chahal
-Check out more projects at https://github.com/RobinChahal0010
+---
 
-Let’s empower developers to write smarter, cleaner, and more efficient Python code!
+# 🚀 Future Improvements
 
-📌 License
-This project is open-source and available for modification, improvement, and learning.
+- Multi-language support
+- AI-powered code suggestions
+- Security vulnerability scanning
+- Docker deployment
+- Real-time editor analysis
+- Code smell detection
+- GitHub integration
+- REST API support
 
+---
+
+# 🎯 Project Goals
+
+This project was built to explore:
+
+- Static code analysis
+- Software quality metrics
+- AST parsing
+- Complexity measurement
+- Report generation systems
+- Backend application architecture
+
+while creating a practical developer-focused tool.
+
+---
+
+# 🤝 Contribution
+
+Contributions are welcome.
+
+```bash
+Fork → Improve → Pull Request 🚀
+```
+
+---
+
+# 👨‍💻 Developer
+
+### Robinpreet Singh Chahal
+
+🚀 Backend Developer  
+🧠 System Builder  
+☕ Coffee Powered Engineer
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&center=true&vCenter=true&width=500&lines=Inspect+Code.;Measure+Complexity.;Build+Better+Software." />
+</p>
+
+---
+
+# 🌟 Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+# 📜 License
+
+This project is open-source and available for learning, modification, and improvement.
