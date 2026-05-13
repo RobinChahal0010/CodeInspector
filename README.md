@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./assets/banner.png" width="100%" alt="CodeInspector Banner"/>
-</p>
+
 
 <h1 align="center">🕵️ CodeInspector</h1>
 
